@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
+body {
+  background-color: black;
+  font-family: 'Kanit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-left: 75px;
+  margin-top: 50px;
+  font-size: 2rem;
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1;
+  font-style: normal;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+#text, #text2, #text3, #text4 {
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#text5 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.maincenter {
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#text {
+  font-weight: 400;
+}
+
+#headline {
+  font-weight: 600;
+}
