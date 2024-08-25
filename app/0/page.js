@@ -1,5 +1,11 @@
+'use client'
+
 import Head from 'next/head';
 import { useEffect } from 'react';
+
+export const metadata= {
+  title: 'XRMA | fate',
+};
 
 export default function Home() {
   useEffect(() => {
@@ -231,9 +237,8 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        <title>fate</title>
       </Head>
-      <div className="maincenter">
+      <div className="main-center">
         <a href="" id="text" onClick={function() { window.open('https://t.me/jsfac'); return false; }}>telegram</a><br /><br />
         <a href="" id="text2" onClick={function() { window.open('mailto:hi@xr.ma'); return false; }}>email</a><br /><br />
   <a href="" id="text3" onClick={event => { 
