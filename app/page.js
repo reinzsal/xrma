@@ -10,7 +10,3 @@ export default function Home() {
       </main>
   );
 }
-
-// import styles from "./css.css";
-// <main className={styles.main}>
-// <div className={styles.description}>
