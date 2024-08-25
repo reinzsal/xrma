@@ -14,11 +14,13 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the Homepage.
+You can start editing the home page by modifying [app/page.js](app/page.js). 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open [http://localhost:3000/0](http://localhost:3000/0) with your browser to see the fate page.
+You can start editing the home page by modifying [app/0/page.js](app/0/page.js).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+> The page auto-updates as you edit the file.
 
 ## Learn More
 
