@@ -2,6 +2,7 @@
 
 import '../css.css'
 import {useEffect} from 'react';
+import { notification } from 'antd';
 
 function Spacer() {
     return (
@@ -235,9 +236,23 @@ export default function Home() {
         return false;
     }
 
+    function copy(name, value) {
+        navigator.clipboard.writeText(value)
+            .then(() =>
+                api.success({
+                    message: "Copied!",
+                    placement: "topRight",
+                    description: `My ${name} has been copied to your clipboard. ` +
+                        `If you don't know what this is, then you don't need it.\n\n${value}`,
+                })
+            );
+    }
+
+    const [api, contextHolder] = notification.useNotification();
+
     return (
         <>
-            <div className="main-center">
+            <div className="main-center lowercase">
                 <a href="" id="text" onClick={() => link('https://t.me/jsfac')}>telegram</a>
                 <Spacer/>
 
@@ -246,11 +261,7 @@ export default function Home() {
 
                 <a href="" id="text3" onClick={event => {
                     event.preventDefault();
-                    const value = 'rank@xmpp.jp';
-                    navigator.clipboard.writeText(value)
-                        .then(() => alert("My XMPP address has been copied to your clipboard. " +
-                            "If you don't know what this is, then you don't need it.\n\n" + value));
-
+                    copy("XMP address", 'rank@xmpp.jp')
                 }}>xmpp</a>
                 <Spacer/>
 
@@ -269,6 +280,8 @@ export default function Home() {
 
                 <p id="headline">fate</p>
             </div>
+
+            {contextHolder}
         </>
     );
 }

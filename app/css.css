@@ -6,10 +6,13 @@ body {
     margin-left: 75px;
     margin-top: 50px;
     font-size: 2rem;
-    text-transform: lowercase;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1;
     font-style: normal;
+}
+
+.lowercase {
+    text-transform: lowercase;
 }
 
 @media screen and (min-width: 600px) {
