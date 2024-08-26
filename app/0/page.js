@@ -245,7 +245,12 @@ export default function Home() {
                     description: `My ${name} has been copied to your clipboard. ` +
                         `If you don't know what this is, then you don't need it.\n\n${value}`,
                 })
-            );
+            ).catch(() => {
+                api.error({
+                    message: "Copy Failed!",
+                    placement: "topRight",
+                    description: `Failed to copy my ${name} to your clipboard.`,
+                })});
     }
 
     const [api, contextHolder] = notification.useNotification();
@@ -268,10 +273,7 @@ export default function Home() {
                 <a href="" id="text4" onClick={event => {
                     event.preventDefault();
                     const value = '05fffff8511078c6ced94ed7ac45b0dc8b18f56878808360637af19bc9940c6526';
-                    navigator.clipboard.writeText(value)
-                        .then(() => alert("My Session ID has been copied to your clipboard. " +
-                            "If you don't know what this is, then you don't need it.\n\n" + value));
-
+                    copy('Session ID', value)
                 }}>session</a>
                 <Spacer/>
 
