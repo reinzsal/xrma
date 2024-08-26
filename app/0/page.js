@@ -244,12 +244,16 @@ export default function Home() {
                     placement: "topRight",
                     description: `My ${name} has been copied to your clipboard. ` +
                         `If you don't know what this is, then you don't need it.\n\n${value}`,
+                    showProgress: true,
+                    pauseOnHover: true,
+                    duration: 10,
                 })
             ).catch(() => {
                 api.error({
                     message: "Copy Failed!",
                     placement: "topRight",
                     description: `Failed to copy my ${name} to your clipboard.`,
+                    duration: 0,
                 })});
     }
 
