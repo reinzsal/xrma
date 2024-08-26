@@ -3,6 +3,15 @@
 import '../css.css'
 import {useEffect} from 'react';
 
+function Spacer() {
+    return (
+        <>
+            <br/>
+            <br/>
+        </>
+    )
+}
+
 export default function Home() {
     useEffect(() => {
         console.log("It works?..");
@@ -220,16 +229,20 @@ export default function Home() {
         }
     }, []);
 
-    return (<>
+    function link(path) {
+        window.open(path);
+        return false;
+    }
+
+    return (
+        <>
             <div className="main-center">
-                <a href="" id="text" onClick={function () {
-                    window.open('https://t.me/jsfac');
-                    return false;
-                }}>telegram</a><br/><br/>
-                <a href="" id="text2" onClick={function () {
-                    window.open('mailto:hi@xr.ma');
-                    return false;
-                }}>email</a><br/><br/>
+                <a href="" id="text" onClick={() => link('https://t.me/jsfac')}>telegram</a>
+                <Spacer/>
+
+                <a href="" id="text2" onClick={() => link('mailto:hi@xr.ma')}>email</a>
+                <Spacer/>
+
                 <a href="" id="text3" onClick={event => {
                     event.preventDefault();
                     const textarea = document.createElement("textarea");
@@ -239,7 +252,8 @@ export default function Home() {
                     document.execCommand("copy");
                     document.body.removeChild(textarea);
                     alert("My XMPP address has been copied to your clipboard. If you don't know what this is, then you don't need it.\n\n rank@xmpp.jp");
-                }}>xmpp</a><br/><br/>
+                }}>xmpp</a>
+                <Spacer/>
                 <a href="" id="text4" onClick={event => {
                     event.preventDefault();
                     const textarea = document.createElement("textarea");
@@ -249,12 +263,14 @@ export default function Home() {
                     document.execCommand("copy");
                     document.body.removeChild(textarea);
                     alert("My Session ID has been copied to your clipboard. If you don't know what this is, then you don't need it.\n\n 05fffff8511078c6ced94ed7ac45b0dc8b18f56878808360637af19bc9940c6526");
-                }}>session</a><br/><br/>
-                <a href="" id="text5" onClick={function () {
-                    window.open('https://xr.ma/pgp.txt');
-                    return false;
-                }}>pgp.txt</a><br/><br/>
+                }}>session</a>
+                <Spacer/>
+
+                <a href="" id="text5" onClick={() => link('https://xr.ma/pgp.txt')}>pgp.txt</a>
+                <Spacer/>
+
                 <p id="headline">fate</p>
             </div>
-        </>);
+        </>
+    );
 }
