@@ -263,7 +263,7 @@ export default function Home() {
                 }}>session</a>
                 <Spacer/>
 
-                <a href="" id="text5" onClick={() => link('https://xr.ma/pgp.txt')}>pgp.txt</a>
+                <a href="" id="text5" onClick={() => link('/pgp.txt')}>pgp.txt</a>
                 <Spacer/>
 
                 <p id="headline">fate</p>
