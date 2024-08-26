@@ -19,10 +19,10 @@ export default function Home() {
         function WordShuffler(holder, opt) {
             const that = this;
             const time = 0;
-            this.now;
-            this.then = Date.now();
+            this.now = Date.now();
+            this.then = this.now;
 
-            this.delta;
+            this.delta = 0;
             this.currentTimeOffset = 0;
 
             this.word = null;
