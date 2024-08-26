@@ -283,14 +283,11 @@ export default function Home() {
 
             <ConfigProvider
                 theme={{
-                    components: {
-                        Notification: {
-                            algorithm: theme.darkAlgorithm,
-                        },
-                    },
+                    // Use dark algorithm for the Notification
+                    algorithm: theme.darkAlgorithm,
                 }}
             >
-            {contextHolder}
+                {contextHolder}
             </ConfigProvider>
         </>
     );

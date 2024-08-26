@@ -1,13 +1,13 @@
 'use client'
 
 import Link from "next/link";
-import {lowercase} from './css.css'
+import './css.css'
 
 export default function Home() {
   return (
-      <main className={lowercase}>
+      <div className={'lowercase'}>
         <h1>Home Page</h1>
         <Link href={"/0"}>Go to Fate</Link>
-      </main>
+      </div>
   );
 }
