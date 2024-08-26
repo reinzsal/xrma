@@ -2,7 +2,7 @@
 
 import '../css.css'
 import {useEffect} from 'react';
-import { notification } from 'antd';
+import {ConfigProvider, notification, theme} from 'antd';
 
 function Spacer() {
     return (
@@ -281,7 +281,17 @@ export default function Home() {
                 <p id="headline">fate</p>
             </div>
 
+            <ConfigProvider
+                theme={{
+                    components: {
+                        Notification: {
+                            algorithm: theme.darkAlgorithm,
+                        },
+                    },
+                }}
+            >
             {contextHolder}
+            </ConfigProvider>
         </>
     );
 }
