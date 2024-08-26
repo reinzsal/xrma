@@ -245,24 +245,21 @@ export default function Home() {
 
                 <a href="" id="text3" onClick={event => {
                     event.preventDefault();
-                    const textarea = document.createElement("textarea");
-                    textarea.value = 'rank@xmpp.jp';
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    document.execCommand("copy");
-                    document.body.removeChild(textarea);
-                    alert("My XMPP address has been copied to your clipboard. If you don't know what this is, then you don't need it.\n\n rank@xmpp.jp");
+                    const value = 'rank@xmpp.jp';
+                    navigator.clipboard.writeText(value)
+                        .then(() => alert("My XMPP address has been copied to your clipboard. " +
+                            "If you don't know what this is, then you don't need it.\n\n" + value));
+
                 }}>xmpp</a>
                 <Spacer/>
+
                 <a href="" id="text4" onClick={event => {
                     event.preventDefault();
-                    const textarea = document.createElement("textarea");
-                    textarea.value = '05fffff8511078c6ced94ed7ac45b0dc8b18f56878808360637af19bc9940c6526';
-                    document.body.appendChild(textarea);
-                    textarea.select();
-                    document.execCommand("copy");
-                    document.body.removeChild(textarea);
-                    alert("My Session ID has been copied to your clipboard. If you don't know what this is, then you don't need it.\n\n 05fffff8511078c6ced94ed7ac45b0dc8b18f56878808360637af19bc9940c6526");
+                    const value = '05fffff8511078c6ced94ed7ac45b0dc8b18f56878808360637af19bc9940c6526';
+                    navigator.clipboard.writeText(value)
+                        .then(() => alert("My Session ID has been copied to your clipboard. " +
+                            "If you don't know what this is, then you don't need it.\n\n" + value));
+
                 }}>session</a>
                 <Spacer/>
 
