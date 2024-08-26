@@ -17,8 +17,8 @@ export default function Home() {
         console.log("It works?..");
 
         function WordShuffler(holder, opt) {
-            var that = this;
-            var time = 0;
+            const that = this;
+            const time = 0;
             this.now;
             this.then = Date.now();
 
@@ -30,7 +30,7 @@ export default function Home() {
             this.currentCharacter = 0;
             this.currentWordLength = 0;
 
-            var options = {
+            const options = {
                 fps: 20,
                 timeOffset: 5,
                 textColor: '#000',
@@ -70,12 +70,12 @@ export default function Home() {
             }
 
             this.getRandomColor = function () {
-                var randNum = Math.floor(Math.random() * this.colors.length);
+                const randNum = Math.floor(Math.random() * this.colors.length);
                 return this.colors[randNum];
             };
 
             this.getRandomFont = function () {
-                var randNum = Math.floor(Math.random() * this.fonts.length);
+                const randNum = Math.floor(Math.random() * this.fonts.length);
                 return this.fonts[randNum];
             };
 
@@ -95,14 +95,14 @@ export default function Home() {
                 if (characterToReplace === " ") {
                     return ' ';
                 }
-                var randNum = Math.floor(Math.random() * this.chars.length);
-                var lowChoice = -.5 + Math.random();
-                var picketCharacter = this.chars[randNum];
-                var choosen = picketCharacter.toLowerCase();
+                const randNum = Math.floor(Math.random() * this.chars.length);
+                const lowChoice = -.5 + Math.random();
+                const picketCharacter = this.chars[randNum];
+                let chosen = picketCharacter.toLowerCase();
                 if (this.mixCapital) {
-                    choosen = lowChoice < 0 ? picketCharacter.toLowerCase() : picketCharacter;
+                    chosen = lowChoice < 0 ? picketCharacter.toLowerCase() : picketCharacter;
                 }
-                return choosen;
+                return chosen;
             };
 
             this.writeWord = function (word) {
@@ -112,7 +112,7 @@ export default function Home() {
             };
 
             this.generateSingleCharacter = function (color, character, font) {
-                var span = document.createElement('span');
+                const span = document.createElement('span');
                 span.style.color = color;
                 span.style.fontFamily = font; // Apply the font
                 span.innerHTML = character;
@@ -126,25 +126,25 @@ export default function Home() {
                 if (this.delta > this.interval) {
                     this.currentTimeOffset++;
 
-                    var word = [];
-                    var currentFont = this.getRandomFont(); // Shuffle through fonts
+                    const word = [];
+                    const currentFont = this.getRandomFont(); // Shuffle through fonts
 
                     if (this.currentTimeOffset === this.timeOffset && this.currentCharacter !== this.currentWordLength) {
                         this.currentCharacter++;
                         this.currentTimeOffset = 0;
                     }
-                    for (var k = 0; k < this.currentCharacter; k++) {
+                    for (let k = 0; k < this.currentCharacter; k++) {
                         word.push(this.currentWord[k]);
                     }
 
-                    for (var i = 0; i < this.currentWordLength - this.currentCharacter; i++) {
+                    for (let i = 0; i < this.currentWordLength - this.currentCharacter; i++) {
                         word.push(this.getRandCharacter(this.currentWord[this.currentCharacter + i]));
                     }
 
                     if (that.useCanvas) {
                         c.clearRect(0, 0, stage.x * stage.dpr, stage.y * stage.dpr);
                         c.font = that.fontSize + " sans-serif";
-                        var spacing = 0;
+                        let spacing = 0;
                         word.forEach(function (w, index) {
                             if (index > that.currentCharacter) {
                                 c.fillStyle = that.getRandomColor();
@@ -165,8 +165,8 @@ export default function Home() {
                         if (this.holder) {
                             this.holder.innerHTML = '';
                             word.forEach(function (w, index) {
-                                var color = index > that.currentCharacter ? that.getRandomColor() : that.textColor;
-                                var font = index > that.currentCharacter ? that.getRandomFont() : 'Kanit, sans-serif'; // Use random font or final font
+                                const color = index > that.currentCharacter ? that.getRandomColor() : that.textColor;
+                                const font = index > that.currentCharacter ? that.getRandomFont() : 'Kanit, sans-serif'; // Use random font or final font
                                 that.holder.appendChild(that.generateSingleCharacter(color, w, font));
                             });
                         }
