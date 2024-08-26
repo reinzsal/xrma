@@ -195,7 +195,8 @@ export default function Home() {
         }
 
         function initializeWordShufflers() {
-            const elements = ['headline', 'text', 'text2', 'text3', 'text4', 'text5', 'shuffler'];
+            // const elements = ['headline', 'text', 'text2', 'text3', 'text4', 'text5', 'shuffler'];
+            const elements = ['headline', 'text', 'text2', 'text3', 'text4', 'text5'];
             const shufflers = {};
 
             elements.forEach(id => {
