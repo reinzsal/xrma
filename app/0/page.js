@@ -13,7 +13,7 @@ function Spacer() {
     )
 }
 
-export default function Home() {
+export default function Fate() {
     useEffect(() => {
         console.log("It works?..");
 
