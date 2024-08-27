@@ -1,13 +1,10 @@
 'use client'
 
-import Link from "next/link";
-import './css.css'
+// Currently displays the same contents as the page at /0
+import Fate from "@/app/0/page";
 
 export default function Home() {
   return (
-      <div className={'lowercase'}>
-        <h1>Home Page</h1>
-        <Link href={"/0"}>Go to Fate</Link>
-      </div>
+      <Fate/>
   );
 }
