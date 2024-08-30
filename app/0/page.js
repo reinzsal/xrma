@@ -262,7 +262,7 @@ export default function Fate() {
     return (
         <>
             <div className="main-center lowercase">
-                <a href="" id="text" onClick={() => link('https://t.me/jsfac')}>telegram</a>
+                <a href="" id="text" onClick={() => link('https://t.me/btcgoblin')}>telegram</a>
                 <Spacer/>
 
                 <a href="" id="text2" onClick={() => link('mailto:hi@xr.ma')}>email</a>
