@@ -284,7 +284,7 @@ export default function Fate() {
                 <a href="" id="text5" onClick={() => link('/pgp.txt')}>pgp.txt</a>
                 <Spacer/>
 
-                <p id="headline">fate</p>
+                <p id="headline">maneki</p>
             </div>
 
             <ConfigProvider
