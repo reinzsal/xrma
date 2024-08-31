@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'XR.MA | fate',
-    description: 'The XR.MA fate'
+    title: 'maneki',
+    description: 'TG: @btcgoblin'
 };
 
 export default function Layout({children}) {
