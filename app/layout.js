@@ -1,8 +1,8 @@
 import './css.css'
 
 export const metadata = {
-    title: 'XR.MA | Home',
-    description: 'The XR.MA homepage'
+    title: 'maneki',
+    description: 'TG: @btcgoblin'
 }
 
 export default function RootLayout({ children }) {
