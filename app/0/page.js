@@ -276,7 +276,7 @@ export default function Fate() {
 
                 <a href="" id="text4" onClick={event => {
                     event.preventDefault();
-                    const value = '05fffff8511078c6ced94ed7ac45b0dc8b18f56878808360637af19bc9940c6526';
+                    const value = '05f3f3d743ebb090c9da4b64e33c89a4a8f25aff946bfc49a1d6bb9e4add83965f';
                     copy('Session ID', value)
                 }}>session</a>
                 <Spacer/>
@@ -289,7 +289,6 @@ export default function Fate() {
 
             <ConfigProvider
                 theme={{
-                    // Use dark algorithm for the Notification
                     algorithm: theme.darkAlgorithm,
                 }}
             >
